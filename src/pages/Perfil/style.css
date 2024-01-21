@@ -1,0 +1,85 @@
+.divisao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100dvh;
+    
+}
+.container1{
+    width: 15px;
+    transition: 300ms
+     ease-in;
+}
+.container2{
+    width: 94.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 300ms ease-in;
+}
+
+.container1.open{
+    width: 235px;
+}
+.container1.close{
+    width: 70px;
+}
+.container2.open{
+    width: 80%;
+}
+.container2close{
+    width: 94.5%;
+}
+.page{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
+    
+    
+}
+
+.perfilHeader{
+    height: 220px;
+    background-color: aqua;
+    padding: 20px;
+    box-shadow: inset 0px -80px 150px black;
+    background: url('../../assets/img/background.jpg') center 0px;
+    color: #FFF;
+}
+
+.perfilHeader img{
+    height: 100%;
+    border-radius: 100px;
+    filter:brightness(110%) contrast(110%);
+}
+
+.perfilHeader span{
+    font-size: 40px;
+}
+
+.secaoPerfil{
+    padding: 25px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerPerfil1{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerPerfil2{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.26);
+    width: 300px;
+}
+
+.containerPerfil1 span{
+    margin-top: 10px;
+}
