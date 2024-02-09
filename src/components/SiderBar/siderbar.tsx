@@ -5,16 +5,26 @@ import EstoqueSvg from "../../assets/svg/svgButtos/Estoque.svg";
 import GestaoSvg from "../../assets/svg/svgButtos/Gestao.svg";
 import ConfigSvg from "../../assets/svg/svgButtos/Perfil.svg";
 import PerfilSvg from "../../assets/svg/svgButtos/Configuracoes.svg";
+import Foto from "../../assets/img/user.jpg"
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavBarVertical = (props: any) => {
+const SiderBar = (props: any) => {
+
+    const [estado,setEstado] = useState('close')
+
+
     return (
     <>
         
-        <div className={props.estado}>
-            <div className="foto-container" onClick={props.click}><div><div className="foto"></div></div><span>Cleriston</span></div>
+        <div className={props.estado + ' sidebar'}>
+            <div className="foto-container" onClick={props.click}>
+                <div>
+                    <img className="Foto" src={Foto}/>   
+                </div>
+                    <span>Cleriston</span>
+                </div>
             <div className="divMenu">
 
                 <div className="divBotaoMenu">
@@ -36,5 +46,5 @@ const NavBarVertical = (props: any) => {
     );
   };
   
-  export default NavBarVertical;
+  export default SiderBar;
 

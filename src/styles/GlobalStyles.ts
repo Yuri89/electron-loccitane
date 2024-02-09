@@ -7,7 +7,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-
+    a{
+    text-decoration: none;
+    color: #202020
+    ;
+    }
     body{
         background: ${props => props.theme.colors.background};
         color: ${props => props.theme.colors.text};
@@ -16,26 +20,11 @@ export const GlobalStyle = createGlobalStyle`
     .sidebar{
         background: ${props => props.theme.colors.backgroundSideBar};
         color: ${props => props.theme.colors.textSiderBar};
+        transition: 300ms;
     }
 
-    :root {
-        
-
-        /*Fontes*/
-        font-family: 'KantumruyPro', 'InterTight', 'Archivo', 'BIZUDPGothic';
-        --font-links-header-: 'KantumruyPro';
-        --font-numero-: 'InterTight';
-        --font-side-bar-: 'Archivo';
-        --font-texto-destaque-: 'BIZUDPGothic';
-
-        /*tamanho*/
-
-
-        /*thema-ligth*/
-
-
-  
-    }
+    
+    
 
     /* Estilo geral da barra de rolagem para Electron (baseado em WebKit) */
 ::-webkit-scrollbar {
@@ -57,4 +46,16 @@ export const GlobalStyle = createGlobalStyle`
 ::-webkit-scrollbar-thumb:hover {
     background-color: #3A3A3A; /* Cor ao passar o mouse sobre o polegar */
 }
+
+
+/* Tira as setas do input de numero
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+*/
+
 `;
+

@@ -4,6 +4,7 @@ import viteLogo from '/electron-vite.animate.svg'
 import './index.css'
 import Test from './pages/Test/test'
 import { Link } from 'react-router-dom'
+import BotaoTema from './hooks/ToggleTheme/BotaoThema'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <Link to={'test'} onClick={openElectronWindow}>
+          <BotaoTema/>
           <img src={reactLogo} className="logo react" alt="React logo" />
         </Link>
       </div>

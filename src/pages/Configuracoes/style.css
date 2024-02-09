@@ -30,18 +30,21 @@
 .container2close{
     width: 94.5%;
 }
-.page{
+.pageConfig{
     height: 100%;
     width: 100%;
     overflow: hidden;
     overflow-x: auto;
     overflow-y: auto;
     
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.page2{
-    display: flex;
-    width: 1090px;
-    flex-direction: column;
+
+
+.textoInformativo{
+    font-size: 30px;
+    font-weight: bolder;
 }

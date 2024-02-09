@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./style.css";
 import Footer from "../../components/Footer/footer";
 import Header from "../../components/Header/header";
-import NavBarVertical from "../../components/SiderBar/siderbar";
+import SiderBar from "../../components/SiderBar/siderbar";
 import { ReferenceLine , Rectangle, BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 
 
@@ -16,103 +16,163 @@ function Dados(){
 
   const data = [
     {
-      name: 'Page A',
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
+      name: 'Jan',
+      Saida: 482,
+      Estoque: 518,
+      amt: 1000,
     },
     {
-      name: 'Page B',
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
+      name: 'Fev',
+      Saida: 194,
+      Estoque: 806,
+      amt: 1000,
     },
     {
-      name: 'Page C',
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
+      name: 'Mar',
+      Saida: 257,
+      Estoque: 743,
+      amt: 1000,
     },
     {
-      name: 'Page D',
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
+      name: 'Abr',
+      Saida: 962,
+      Estoque: 38,
+      amt: 1000,
     },
     {
-      name: 'Page E',
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
+      name: 'Mai',
+      Saida: 785,
+      Estoque: 215,
+      amt: 1000,
     },
     {
-      name: 'Page F',
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
+      name: 'Jun',
+      Saida: 698,
+      Estoque: 302,
+      amt: 1000,
     },
     {
-      name: 'Page G',
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
+      name: 'Jul',
+      Saida: 842,
+      Estoque: 158,
+      amt: 1000,
+    },
+    {
+      name: 'Ago',
+      Saida: 741,
+      Estoque: 259,
+      amt: 1000,
+    },
+    {
+      name: 'Set',
+      Saida: 428,
+      Estoque: 572,
+      amt: 1000,
+    },
+    {
+      name: 'Out',
+      Saida: 985,
+      Estoque: 15,
+      amt: 1000,
+    },
+    {
+      name: 'Nov',
+      Saida: 871,
+      Estoque: 129,
+      amt: 1000,
+    },
+    {
+      name: 'Dez',
+      Saida: 400,
+      Estoque: 600,
+      amt: 1000,
     },
   ];
 
   const data2 = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
-    { name: 'Group C', value: 300 },
-    { name: 'Group D', value: 200 },
+    { name: 'Group A', value: 160 },
+    { name: 'Group B', value: 40 },
+    { name: 'Group C', value: 800 },
+    
   ];
 
   const data3 = [
     {
-      name: 'Page A',
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
+      name: 'Jan',
+      Saida: 482,
+      Estoque: 518,
+      amt: 1000,
     },
     {
-      name: 'Page B',
-      uv: -3000,
-      pv: 1398,
-      amt: 2210,
+      name: 'Fev',
+      Saida: 194,
+      Estoque: 806,
+      amt: 1000,
     },
     {
-      name: 'Page C',
-      uv: -2000,
-      pv: -9800,
-      amt: 2290,
+      name: 'Mar',
+      Saida: 257,
+      Estoque: 743,
+      amt: 1000,
     },
     {
-      name: 'Page D',
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
+      name: 'Abr',
+      Saida: 962,
+      Estoque: 38,
+      amt: 1000,
     },
     {
-      name: 'Page E',
-      uv: -1890,
-      pv: 4800,
-      amt: 2181,
+      name: 'Mai',
+      Saida: 0,
+      Estoque: 0,
+      amt: 1000,
     },
     {
-      name: 'Page F',
-      uv: 2390,
-      pv: -3800,
-      amt: 2500,
+      name: 'Jun',
+      Saida: 0,
+      Estoque: 0,
+      amt: 1000,
     },
     {
-      name: 'Page G',
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
+      name: 'Jul',
+      Saida: 0,
+      Estoque: 0,
+      amt: 1000,
+    },
+    {
+      name: 'Ago',
+      Saida: 0,
+      Estoque: 0,
+      amt: 1000,
+    },
+    {
+      name: 'Set',
+      Saida: 0,
+      Estoque: 0,
+      amt: 1000,
+    },
+    {
+      name: 'Out',
+      Saida: 0,
+      Estoque: 0,
+      amt: 1000,
+    },
+    {
+      name: 'Nov',
+      Saida: 0,
+      Estoque: 0,
+      amt: 1000,
+    },
+    {
+      name: 'Dez',
+      Saida: 0,
+      Estoque: 0,
+      amt: 1000,
     },
   ];
   
 
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+  const COLORS = ['#005288', '#009dc4', '#8bd1ff', '#b8ddff'];
 
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }: any) => {
@@ -127,19 +187,26 @@ function Dados(){
     );
   };
 
+  const [mudarGrafico , SetMudarGrafico]= useState(false)
+
+  function mudar(){
+      SetMudarGrafico(!mudarGrafico)
+  }
+
   return (
     <div className="divisao">
       <div className={`container1 ${menuOpen ? 'open' : 'close'}`}>
-        <NavBarVertical click={handleClick} estado={`sliderbar ${menuOpen ? 'open' : 'close'}`} />
+        <SiderBar click={handleClick} estado={`sliderbar ${menuOpen ? 'open' : 'close'}`} />
       </div>
       <div className={`container2 ${menuOpen ? 'open' : 'close'}`}>
         <Header />
         <div className="page">
           <div className="page2">
             <div className="secao">
-
+              <div>
+              {!mudarGrafico?
               <div className="linechartDiv">
-                <span className="textLineChart">Test grafico</span>
+                <span className="textLineChart">Grafico Ano Anterior</span>
                 <ResponsiveContainer width='100%' height='100%'>
                   <LineChart
                     width={500}
@@ -157,14 +224,41 @@ function Dados(){
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="pv" stroke="#625cda" activeDot={{ r: 8 }} />
-                    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                    <Line type="monotone" dataKey="Estoque" stroke="#005288" activeDot={{ r: 8 }} />
+                    <Line type="monotone" dataKey="Saida" stroke="#009dc4" />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
-
+                :
+              <div className="linechartDiv">
+            <span className="textLineChart">Grafico Ano Anterior</span>
+              <BarChart
+                width={500}
+                height={300}
+                data={data}
+                margin={{
+                  top: 5,
+                  right: 30,
+                  left: 20,
+                  bottom: 5,
+                }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="Estoque" fill="#005288" activeBar={<Rectangle fill="pink" stroke="blue" />} />
+                <Bar dataKey="Saida" fill="#009dc4" activeBar={<Rectangle fill="gold" stroke="purple" />} />
+              </BarChart>
+              </div>}
+              <div className="botaoMudarGrafico" onClick={mudar}>Mudar para {! mudarGrafico?'Bar':'Line'}</div>
+              </div>
+              
               <div className="piechartDiv">
-                <PieChart width={350} height={250}>
+              <span className="textLineChart">Grafico Do Estoque Atualmente</span>
+                <div className="divPie">
+                  <PieChart width={350} height={250}>
                   <Pie
                     data={data2}
                     cx="50%"
@@ -182,42 +276,22 @@ function Dados(){
                 </PieChart>
                 <div className="legendaPie">
                   <span>legenda</span>
-                  <span><div className="caixaCor um"></div>legenda</span>
-                  <span><div className="caixaCor dois"></div>legenda</span>
-                  <span><div className="caixaCor tres"></div>legenda</span>
-                  <span><div className="caixaCor quatro"></div>legenda</span>
+                  <span><div className="caixaCor um"></div>Vazio</span>
+                  <span><div className="caixaCor dois"></div>Bloqueado</span>
+                  <span><div className="caixaCor tres"></div>Preenchido</span>
+                  
                 </div>
+              </div>
               </div>
 
             </div>
 
             <div className="secao">
 
-            <div className="linechartDiv">
-            <span className="textLineChart">test grafico</span>
-              <BarChart
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                  top: 5,
-                  right: 30,
-                  left: 20,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
-                <Bar dataKey="uv" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
-              </BarChart>
-              </div>
+            
 
               <div className="linechartDiv">
-                <span className="textLineChart">test grafico</span>
+                <span className="textLineChart">Grafico Meta</span>
               <BarChart
                 width={500}
                 height={300}
@@ -234,10 +308,17 @@ function Dados(){
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <ReferenceLine y={0} stroke="#000" />
-                <Bar dataKey="pv" fill="#8884d8" />
-                <Bar dataKey="uv" fill="#82ca9d" />
+                <ReferenceLine y={636} stroke="#585858" />
+                <Bar dataKey="Estoque" fill="#005288" />
+                <Bar dataKey="Saida" fill="#009dc4" />
               </BarChart>
+              </div>
+
+              <div className="infosGraficos">
+                <div className="blocoInfo">Em Estoque <div>230</div></div>
+                <div className="blocoInfo">Entregues<div>700</div></div>
+                <div className="blocoInfo">Urgente<div>53</div></div>
+                <div className="blocoInfo">Bloqueado<div>17</div></div>
               </div>
             </div>
 
